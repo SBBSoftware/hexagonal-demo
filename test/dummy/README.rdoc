@@ -1,0 +1,4 @@
+== README
+
+Dummy application to test Hexagonal rails gem
+<tt>rake doc:app</tt>.

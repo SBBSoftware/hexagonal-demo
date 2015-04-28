@@ -1,0 +1,9 @@
+<% content_for :titles do %>
+  Product <%= @product.id %>
+<% end %>
+<div>Sku: <%= @product.sku %></div>
+<div>Name: <%= @product.name %></div>
+<div>Blurb: <%= @product.blurb %></div>
+<br>
+<%= link_to 'Edit', edit_product_path(@product) %> |
+<%= link_to 'Back', products_path %>

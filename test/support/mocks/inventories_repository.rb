@@ -1,0 +1,2 @@
+class InventoriesRepository
+end

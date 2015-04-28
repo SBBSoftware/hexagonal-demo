@@ -1,0 +1,2 @@
+class MockProductsRepository
+end

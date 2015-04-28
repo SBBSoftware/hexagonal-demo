@@ -1,0 +1,8 @@
+<% content_for :titles do %>
+  Editing Product <%= @product.id %>
+<% end %>
+
+<%= render 'form' %>
+
+<%= link_to 'Show', @product %> |
+<%= link_to 'Back', products_path %>
