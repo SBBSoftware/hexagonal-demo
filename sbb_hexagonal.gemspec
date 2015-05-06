@@ -5,7 +5,7 @@ require 'sbb_hexagonal/version'
 # Describe your gem and declare its dependencies:
 Gem::Specification.new do |spec|
 
-  spec.name          = 'sbb-hexagonal'
+  spec.name          = 'sbb_hexagonal'
   spec.version       = SbbHexagonal::VERSION
   spec.authors       = ['Sean Chatterton']
   spec.email         = ['sean.chatterton@sbbsoftware.com']
