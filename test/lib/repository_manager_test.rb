@@ -89,6 +89,21 @@ class RepositoryManagerTest < Minitest::Test
     should 'raise exception when repository not found' do
       assert_raises(NameError) { SbbHexagonal::RepositoryManager.create(:i_dont_exist) }
     end
+
+    should 'ensure i am not an idiot' do
+      products_controller = MockProductsController.new
+      stocks_controller = MockStocksController.new
+      inventory_object = MockInventory.new
+      stock_object = MockStock.new
+      products_controller_name = products_controller.class.repository_key
+      stocks_controller_name = stocks_controller.class.repository_key
+      inventory_name = inventory_object.class.repository_key
+      stock_name = stock_object.class.repository_key
+      refute [products_controller_name, stocks_controller_name, inventory_name].include?(stock_name)
+      refute [stock_name, stocks_controller_name, inventory_name].include?(products_controller_name)
+      refute [stock_name, products_controller_name, inventory_name].include?(stocks_controller_name)
+      refute [stock_name, products_controller_name, stocks_controller_name ].include?(inventory_name)
+    end
   end
 
 end
